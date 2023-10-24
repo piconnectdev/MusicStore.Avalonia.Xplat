@@ -8,10 +8,8 @@
     xmlns:reactiveUi="http://reactiveui.net"
     xmlns:viewModels="clr-namespace:MusicStore.Xplat.ViewModels"
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-    x:Class="MusicStore.Xplat.Views.MusicStoreView">
-    <Design.DataContext>
-        <viewModels:MusicStoreViewModel />
-    </Design.DataContext>
+    x:Class="MusicStore.Xplat.Views.MusicStoreView"
+    Padding="40">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <TextBox
