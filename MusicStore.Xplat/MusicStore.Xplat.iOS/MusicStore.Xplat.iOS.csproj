@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net7.0-ios</TargetFramework>
+        <TargetFramework>net8.0-ios16.1</TargetFramework>
         <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia.iOS" Version="$(AvaloniaVersion)"/>
+        <PackageReference Include="Avalonia.iOS" Version="$(AvaloniaVersion)" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\MusicStore.Xplat\MusicStore.Xplat.csproj"/>
+        <ProjectReference Include="..\MusicStore.Xplat\MusicStore.Xplat.csproj" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net7.0-ios'">
@@ -19,5 +19,11 @@
 <!--        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>-->
         <!--DEBUG ON SIMULATOR-->
             <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+      <CreatePackage>false</CreatePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+      <CreatePackage>false</CreatePackage>
     </PropertyGroup>
 </Project>
